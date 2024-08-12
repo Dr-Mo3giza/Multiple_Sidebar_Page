@@ -1,0 +1,526 @@
+/* Start Custom Variables */
+:root {
+  --box-radius: 6px;
+  --btn-radius: 4px;
+  --title-bg-color: #f7f7f7;
+  --primary-btn-color: #2f9bc2;
+  --main-box-pd: 25px 15px 15px;
+}
+/* End Custom Variables */
+
+/* Start Global Rules */
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* End Global Rules */
+/* Start Main Component */
+.general-box {
+  background-color: white;
+  border-radius: var(--box-radius);
+  margin-top: 20px;
+  overflow: hidden;
+}
+.general-box .general-box-title {
+  background-color: var(--title-bg-color);
+  border-bottom: 2px solid #dad7d787;
+  font-weight: bold;
+  padding: 22px 20px;
+}
+.general-box .general-box-content {
+  padding: 30px 20px;
+}
+
+.side-box {
+  background-color: white;
+  border-radius: var(--box-radius);
+  margin-bottom: 20px;
+}
+.side-box .side-box-title {
+  font-size: 13px;
+  font-weight: bold;
+  border-bottom: 2px solid #dad7d787;
+  padding: 22px 20px 15px;
+}
+.side-box .side-box-content {
+  padding: 20px;
+}
+/* End Main Component */
+
+body {
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.container {
+  background-color: #f0f1ec;
+  padding: 20px 25px;
+}
+.container .wrapper {
+  display: grid;
+  grid-template-columns: 2fr 7fr 2fr;
+  gap: 15px;
+}
+/* Start Left Sidebard */
+/* Start Search Section */
+.container .wrapper .sidebar-left .search-box {
+  border-radius: var(--box-radius);
+  background: white;
+  padding: 20px 15px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  gap: 3px;
+}
+.container .wrapper .sidebar-left .search-box input[name="search"] {
+  border: none;
+  background-color: var(--title-bg-color);
+  padding: 10px;
+  width: 65%;
+  border-radius: var(--btn-radius);
+}
+.container .wrapper .sidebar-left .search-box input[name="search"]:focus {
+  outline: none;
+}
+.container .wrapper .sidebar-left .search-box .search-btn {
+  border: none;
+  background-color: var(--primary-btn-color);
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  width: 35%;
+  border-radius: var(--btn-radius);
+  cursor: pointer;
+}
+.container .wrapper .sidebar-left .search-box .search-btn:hover {
+  background-color: #1c7c9e;
+}
+/* End Search Section */
+
+/* Start Memebrs Section */
+.sidebar-left .members-box {
+  margin-top: 20px;
+  background-color: white;
+  border-radius: var(--box-radius);
+  font-size: 14px;
+}
+.sidebar-left .members-box .members-title {
+  font-weight: 600;
+  padding: var(--main-box-pd);
+  border-bottom: 1px solid #f0f1ec;
+}
+.sidebar-left .members-box .members-body {
+  padding: 15px;
+  font-size: 14px;
+}
+.sidebar-left .members-box .members-body .members-tags {
+  padding-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+.sidebar-left .members-box .members-body .members-tags .tag {
+  background-color: #77af11;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 5px;
+  border-radius: var(--btn-radius);
+  cursor: pointer;
+}
+.sidebar-left .members-box .members-body .members-tags .tag.active {
+  background-color: #618d11;
+}
+.sidebar-left .members-box .members-body .members-account {
+  margin-bottom: 25px;
+}
+.sidebar-left .members-box .members-body .members-account .account {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.sidebar-left .members-box .members-body .members-account .account .account-avatar {
+  width: 50px;
+  border-radius: var(--box-radius);
+  margin-right: 10px;
+}
+.sidebar-left .members-box .members-body .members-account .account .account-name .name {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+}
+.sidebar-left .members-box .members-body .members-account .account .account-name .friends-count {
+  display: block;
+  background-color: #e4ebf2;
+  color: #88add1;
+  padding: 3px 7px;
+  border-radius: var(--btn-radius);
+  font-size: 12px;
+  font-weight: 500;
+  width: fit-content;
+  margin-top: 3px;
+}
+/* End Memebrs Section */
+/* Start Active Members Section */
+.sidebar-left .members-box .active-members-body {
+  padding: var(--main-box-pd);
+  padding-bottom: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 5px;
+}
+.sidebar-left .members-box .active-members-body .active-member {
+  width: 50px;
+  border-radius: var(--box-radius);
+}
+/* End Active Members Section */
+/* Start The Schedule Section */
+.sidebar-left .members-box .schedule-body {
+  padding: var(--main-box-pd);
+  color: #979aa0;
+  font-size: 13px;
+}
+.sidebar-left .members-box .schedule-body .schedule-month {
+  text-align: right;
+  margin-bottom: 20px;
+  font-weight: bold;
+  padding-right: 5px;
+}
+.sidebar-left .members-box .schedule-body .schedule-days {
+  padding: 0 10px;
+}
+.sidebar-left .members-box .schedule-body .schedule-days table {
+  width: 100%;
+}
+.sidebar-left .members-box .schedule-body .schedule-days table thead tr th {
+  padding-bottom: 10px;
+}
+.sidebar-left .members-box .schedule-body .schedule-days table tbody tr {
+  height: 30px;
+}
+.sidebar-left .members-box .schedule-body .schedule-days table tbody tr td {
+  text-align: center;
+}
+.sidebar-left .members-box .schedule-footer {
+  padding: 0 0 20px 15px;
+  font-size: 13px;
+}
+.sidebar-left .members-box .schedule-footer i {
+  font-size: 10px;
+}
+/* End The Schedule Section */
+/* End Left Sidebar */
+
+/* Start Middle Sidebar */
+/* Start Welcome Slider Section */
+.sidebar-mid .welcome-box {
+  height: 350px;
+  overflow: hidden;
+  border-radius: var(--box-radius);
+  position: relative;
+}
+.sidebar-mid .welcome-box .welcome-slider {
+  position: relative;
+}
+.sidebar-mid .welcome-box .welcome-slider .welcome-bg {
+  max-width: 100%;
+  position: absolute;
+  opacity: 0;
+}
+.sidebar-mid .welcome-box .welcome-slider .welcome-bg.active {
+  opacity: 100%;
+}
+.sidebar-mid .welcome-box .welcome-msg {
+  position: absolute;
+  background-color: #33363d;
+  color: white;
+  font-size: 28px;
+  font-weight: 500;
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 10px;
+  bottom: 20%;
+  left: 25px;
+}
+.sidebar-mid .welcome-box .welcome-slider-btns {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  gap: 6px;
+  bottom: 5%;
+  left: calc(50% - 63px);
+}
+.sidebar-mid .welcome-box .welcome-slider-btns .slider-btn {
+  display: block;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  border: 4px solid white;
+  background-color: #33363d;
+  opacity: 50%;
+  cursor: pointer;
+}
+.sidebar-mid .welcome-box .welcome-slider-btns .slider-btn.active {
+  opacity: 75%;
+}
+/* End Welcome Slider Section */
+
+/* Start Latest Activity Section*/
+.latest-activity-post {
+  display: flex;
+  font-size: 14px;
+  border-bottom: 1px solid #dad7d787;
+  padding-bottom: 25px;
+  margin-bottom: 20px;
+}
+.latest-activity-post img.post-user {
+  width: 65px;
+  height: 65px;
+  border-radius: var(--box-radius);
+  margin-right: 15px;
+}
+.latest-activity-post .post-content {
+  color: #727272;
+}
+.latest-activity-post .post-content .post-user-data {
+  margin-bottom: 14px;
+}
+.latest-activity-post .post-content .post-user-data span.focus {
+  font-weight: bold;
+  color: black;
+}
+.latest-activity-post .post-content .post-user-data .post-user-date {
+  margin-top: 5px;
+  font-size: 13px;
+}
+.latest-activity-post .post-content .post-text {
+  line-height: 1.7;
+}
+.latest-activity-post .post-content .post-text .post-text-share {
+  margin-top: 15px;
+}
+.load-more {
+  background-color: var(--title-bg-color);
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: var(--box-radius);
+}
+/* End Latest Activity Section*/
+/* Start Latest Posts Section */
+.latest-posts-box {
+  display: flex;
+  margin-bottom: 25px;
+}
+.latest-posts-box .post-img {
+  width: 120px;
+  border-radius: var(--box-radius);
+  margin-right: 15px;
+  height: fit-content;
+}
+.latest-posts-box .post-content {
+  color: #727272;
+  font-size: 14px;
+}
+.latest-posts-box .post-content .post-head {
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.latest-posts-box .post-content .post-body {
+  line-height: 1.7;
+}
+
+.latest-posts-box .post-content .post-body i.show-more {
+  font-size: 9px;
+  color: black;
+}
+.latest-posts-box .post-content .post-body i.show-more:hover {
+  cursor: pointer;
+}
+.latest-posts-footer {
+  display: flex;
+  justify-content: flex-end;
+  color: #727272;
+  font-weight: bold;
+  font-size: 14px;
+  align-items: center;
+}
+.latest-posts-footer > span {
+  display: block;
+}
+.latest-posts-footer span.page-num.active {
+  background-color: #f0f1ed;
+  padding: 7px 8px;
+}
+.latest-posts-footer span.page-num {
+  background-color: #f0f1ed80;
+  padding: 5px 8px;
+  margin-left: 7px;
+  border-radius: var(--btn-radius);
+}
+.latest-posts-footer > span.page-num:hover {
+  cursor: pointer;
+  background-color: #f0f1ed;
+  padding: 7px 8px;
+  transition: all 0.3s linear;
+}
+/* End Latest Posts Section */
+
+/* Start Features Section */
+.feature-wrapper {
+  display: flex;
+  gap: 15px;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.feature-wrapper .feature-box {
+  max-width: 200px;
+}
+.feature-wrapper .feature-box .feature-img {
+  max-width: 100%;
+  height: 135px;
+  margin-bottom: 5px;
+  border-radius: var(--box-radius);
+}
+.feature-wrapper .feature-box .feature-title {
+  font-size: 14px;
+}
+/* End Features Section */
+/* End Middle Sidebar */
+
+/* Start Right Sidebar */
+/* Start Sign In Section */
+.sidebar-right form.sign-in {
+  font-size: 13px;
+}
+.sidebar-right form.sign-in > * {
+  margin-bottom: 24px;
+}
+.sidebar-right form.sign-in input {
+  line-height: normal;
+}
+.sidebar-right form.sign-in input#username,
+.sidebar-right form.sign-in input#passcode {
+  padding: 15px 10px;
+  background: var(--title-bg-color);
+  border: none;
+  border-radius: var(--btn-radius);
+  display: block;
+  width: 100%;
+}
+.sidebar-right form.sign-in input#username:focus,
+.sidebar-right form.sign-in input#passcode:focus {
+  outline: none;
+}
+.sidebar-right form.sign-in .remember-user {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.sidebar-right form.sign-in .remember-user input[type="checkbox"] {
+  cursor: pointer;
+}
+.sidebar-right form.sign-in .remember-user label[for="remember-me"] {
+  color: #727272;
+}
+.sidebar-right form.sign-in input[type="submit"] {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: var(--primary-btn-color);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+  border-radius: var(--btn-radius);
+  cursor: pointer;
+}
+.sidebar-right form.sign-in .lost-password {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+.sidebar-right form.sign-in .lost-password i {
+  color: #343434;
+  font-size: 12px;
+}
+.sidebar-right form.sign-in .lost-password a.password-reset {
+  color: #343434;
+  text-decoration: none;
+  font-size: 14px;
+}
+/* End Sign In Section */
+
+/* Start Statistics Section */
+.sidebar-right .stats .stat-box {
+  background-color: #c12f6d;
+  margin-bottom: 5px;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: var(--btn-radius);
+}
+.sidebar-right .stats .stat-box .stat-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.sidebar-right .stats .stat-box .stat-name i {
+  font-size: 14px;
+}
+.sidebar-right .stats .stat-box .stat-value .s-value {
+  font-size: 18px;
+  font-weight: 600;
+}
+/* End Statistics Section */
+
+/* Start Who's Online Section */
+.sidebar-right .online-users {
+  color: #727272;
+  font-size: 13px;
+}
+/* End Who's Online Section */
+
+/* Start Recent Replies Section */
+.sidebar-right .reply-box {
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+.sidebar-right .reply-box .reply-date {
+  color: #727272;
+  font-size: 13px;
+}
+/* End Recent Replies Section */
+
+/* Start Recent Topics Section */
+.sidebar-right .topic-box {
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+.sidebar-right .topic-box .author {
+  color: #727272;
+}
+.sidebar-right .topic-box .topic-date {
+  color: #727272;
+  font-size: 13px;
+  display: block;
+}
+/* End Recent Topics Section */
+/* End Right Sidebar */
